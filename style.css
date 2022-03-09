@@ -451,12 +451,30 @@ button{
 
 @media (max-width: 768px) {
 
+    .body-container{
+        height: auto;
+    }
+
     .menu-container{
+        height: 60vh;
+        flex-direction: column;
+    }
+
+    .last-games{
+        height: 60%;
+        width: 100%;
+    }
+
+    .game-settings-container{
         height: 40%;
     }
 
+    .play-time{
+        height: 60%;
+    }
+
     .cards-container{
-        height: calc(60% - 50px);
+        height: 60vh;
     }
 
     .cards{
@@ -473,13 +491,24 @@ button{
         padding-left: 10px;
     }
 
+    .time-score{
+        font-size: 12px;
+    }
+
     .count-steps{
         flex-direction: column;
         padding-right: 5px;
+        font-size: 12px;
     }
 
     .count-steps p{
         line-height: 92%;
+    }
+
+    .footer{
+        position: static;
+        opacity: 1;
+        background: var(--blue-color);
     }
 }
 
@@ -512,11 +541,11 @@ button{
     }
 
     .time-score{
-        font-size: 7px;
+        font-size: 10px;
     }
 
     .count-steps{
-        font-size: 7px;
+        font-size: 10px;
     }
 }
 
