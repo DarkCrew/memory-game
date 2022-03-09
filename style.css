@@ -27,7 +27,7 @@ button{
 
 .body-container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
     width: 100%;
@@ -90,7 +90,6 @@ button{
 .menu-container{
     display: flex;
     flex-direction: column;
-    gap: 50px;
     height: 100%;
     width: 30%;
     padding: 20px;
@@ -103,9 +102,14 @@ button{
     display: flex;
     flex-direction: column;
     border: 3px solid var(--orange-color);
-    height: 70%;
+    height: 60%;
     width: 100%;
     padding: 0 10px;
+}
+
+.game-settings-container{
+    height: 40%;
+    width: 100%;
 }
 
 .score-title{
@@ -139,13 +143,34 @@ button{
     transform: scale(0.95);
 }
 
+.time-score-main-container{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 100%;
+}
+
+.time-score-container-1{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+}
+
+.time-score-container-2{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+}
+
 .time-score-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10%;
+    height: 18%;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
     background: var(--blue-color);
     color: var(--orange-color);
     font-size: 17px;
@@ -185,7 +210,8 @@ button{
 .game-info{
     display: flex;
     flex-direction: column;
-    height: 20%;
+    justify-content: center;
+    height: 80%;
     width: 100%;
 }
 
@@ -211,7 +237,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
+    height: 40%;
     width: 100%;
     font-size: 100px;
     user-select: none;
@@ -226,7 +252,7 @@ button{
 }
 
 .new-game{
-    height: 10%;
+    height: 20%;
     width: 100%;
     user-select: none;
 }
@@ -302,6 +328,223 @@ button{
 .card-frontside{
     transform: rotateY(180deg);
 }
+
+
+@media (max-width: 1024px) {
+
+    .body-container{
+        flex-direction: column;
+    }
+
+    .menu-container{
+        order: 1;
+        height: 30%;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .last-games{
+        height: 100%;
+        width: 60%;
+    }
+
+    .score-title-name{
+        font-size: 20px;
+    }
+
+    .score-reload{
+        height: 20px;
+        width: 20px;
+    }
+
+    .time-score-main-container{
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .time-score-container-1{
+        height: 100%;
+    }
+    
+    .time-score-container-2{
+        height: 100%;
+    }
+
+    .time-score{
+        font-size: 10px;
+        width: 65%;
+    }
+
+    .position{
+        width: 10%;
+        padding-left: 5px;
+    }
+
+    .time-info{
+        width: 90%;
+        padding-left: 3px;
+    }
+
+    .count-steps{
+        font-size: 10px;
+        width: 25%;
+        justify-content: flex-end;
+        margin-right: 0;
+    }
+
+    .steps-info{
+        margin: 0 3px;
+    }
+
+    .game-settings-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 40%;
+    }
+
+    .game-info{
+        height: 80%;
+        width: 100%;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play-time{
+        height: 40%;
+        width: 70%;
+        font-size: 70px;
+    }
+
+    .new-game{
+        height: 20%;
+        width: 100%;
+    }
+
+    .button-new-game{
+        font-size: 20px;
+    }
+
+    .cards-container{
+        height: calc(70% - 50px);
+        width: 100%;
+        order: 2;
+    }
+
+    .cards{
+        max-width: 550px;
+    }
+
+    .card{
+        height: 90px;
+        width: 90px;
+        margin: 5px;
+    }
+
+    .footer{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu-container{
+        height: 40%;
+    }
+
+    .cards-container{
+        height: calc(60% - 50px);
+    }
+
+    .cards{
+        max-width: 450px;
+    }
+
+    .card{
+        height: 80px;
+        width: 80px;
+        margin: 5px;
+    }
+
+    .time-info{
+        padding-left: 10px;
+    }
+
+    .count-steps{
+        flex-direction: column;
+        padding-right: 5px;
+    }
+
+    .count-steps p{
+        line-height: 92%;
+    }
+}
+
+@media (max-width: 568px) {
+
+    .score-title-name{
+        font-size: 15px;
+    }
+
+    .game-info{
+        gap: 0;
+    }
+
+    .steps-count-container{
+        font-size: 18px;
+    }
+
+    .play-time{
+        font-size: 50px;
+    }
+
+    .cards{
+        max-width: 400px;
+    }
+
+    .card{
+        height: 70px;
+        width: 70px;
+        margin: 5px;
+    }
+
+    .time-score{
+        font-size: 7px;
+    }
+
+    .count-steps{
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .cards{
+        max-width: 300px;
+    }
+
+    .card{
+        height: 60px;
+        width: 60px;
+        margin: 5px;
+    }
+
+    .steps-count-container{
+        font-size: 15px;
+    }
+
+    .play-time{
+        font-size: 40px;
+    }
+
+    .button-new-game{
+        font-size: 15px;
+    }
+}
+
 
 @font-face{
     font-family: 'Inter-Bold';
