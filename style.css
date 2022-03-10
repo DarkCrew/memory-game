@@ -138,9 +138,11 @@ button{
     cursor: pointer;
     transition: 1s;
     transform: scale(1);
+    -webkit-transform: scale(1);
 }
 .score-reload:hover{
     transform: scale(0.95);
+    -webkit-transform: scale(0.95);
 }
 
 .time-score-main-container{
@@ -268,12 +270,15 @@ button{
     font-size: 30px;
     transition: 1s;
     transform: scale(1);
+    -webkit-transform: scale(1);
 }
 .button-new-game:hover{
     transform: scale(0.95);
+    -webkit-transform: scale(0.95);
 }
 .button-new-game:disabled{
     transform: scale(1);
+    -webkit-transform: scale(1);
     opacity: .2;
     cursor: auto;
 }
@@ -303,15 +308,18 @@ button{
     transition: transform 1s;
     transform-style: preserve-3d;
     transform: scale(1);
+    -webkit-transform: scale(1);
     opacity: 1;
 }
 
 .card.ready:hover{
     transform: scale(.95);
+    -webkit-transform: scale(.95);
 }
 
 .card.ready.flip{
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 .card-backside,
@@ -327,6 +335,7 @@ button{
 }
 .card-frontside{
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 
